@@ -1,7 +1,7 @@
 # monkey
-##目录结构
-  -Base
-     -analysis.py    分析monkey日志
+## 目录结构
+*  -Base
+**   -analysis.py    分析monkey日志
      -imgProcess.py  图像识别
      -init.py        初始化配置
      -monkeyBase.py  封装monkey命令
