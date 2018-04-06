@@ -1,0 +1,21 @@
+adb: 
+- 'adb shell monkey -p '
+- 'com.game37.bayechuanqi '
+- '--ignore-crashes '
+- '--ignore-timeouts '
+- '--ignore-native-crashes '
+- '--pct-touch 30 '
+- '--pct-motion 30 '
+- '--pct-majornav 40 '
+- '-v-v '
+- '--throttle 300 '
+- 100
+#命令头
+#包名
+#忽略崩溃，不忽略填null
+#忽略ANR错误，不忽略填null
+#忽略本地崩溃，不忽略填null
+#-- pct 事件类型 百分比 如--pct-touch 30  touch事件30%
+#-v-v 日志等级
+#--throttle 300 延时300
+# 执行次数 10W次大约2.5小时

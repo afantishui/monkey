@@ -1,0 +1,63 @@
+:Monkey: seed=1522247699115 count=100
+:AllowPackage: com.game37.bayechuanqi
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Event percentages:
+//   0: 30.0%
+//   1: 30.0%
+//   2: 0.0%
+//   3: 0.0%
+//   4: -0.0%
+//   5: -0.0%
+//   6: 0.0%
+//   7: 40.0%
+//   8: 0.0%
+//   9: 0.0%
+//   10: 0.0%
+//   11: 0.0%
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.game37.bayechuanqi/.AppActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.game37.bayechuanqi/.AppActivity } in package com.game37.bayechuanqi
+:Sending Touch (ACTION_DOWN): 0:(290.0,704.0)
+:Sending Touch (ACTION_UP): 0:(287.31757,662.70776)
+:Sending Touch (ACTION_DOWN): 0:(167.0,375.0)
+:Sending Touch (ACTION_UP): 0:(156.1222,385.47617)
+:Sending Touch (ACTION_DOWN): 0:(620.0,375.0)
+:Sending Touch (ACTION_UP): 0:(626.7149,360.65424)
+:Sending Touch (ACTION_DOWN): 0:(677.0,351.0)
+:Sending Touch (ACTION_UP): 0:(675.50525,349.1675)
+:Sending Touch (ACTION_DOWN): 0:(1284.0,372.0)
+:Sending Touch (ACTION_UP): 0:(1291.0533,385.0089)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.cyjh.mobileanjian/.activity.GuiActivity } in package com.cyjh.mobileanjian
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.cyjh.mobileanjian/.activity.GuiActivity } in package com.cyjh.mobileanjian
+:Sending Touch (ACTION_DOWN): 0:(858.0,1054.0)
+:Sending Touch (ACTION_UP): 0:(814.52454,1080.0)
+:Sending Touch (ACTION_DOWN): 0:(42.0,669.0)
+:Sending Touch (ACTION_UP): 0:(35.533638,725.6984)
+:Sending Touch (ACTION_DOWN): 0:(1534.0,711.0)
+:Sending Touch (ACTION_UP): 0:(1473.6174,776.1671)
+:Sending Touch (ACTION_DOWN): 0:(714.0,978.0)
+:Sending Touch (ACTION_UP): 0:(712.7212,975.1006)
+:Sending Touch (ACTION_DOWN): 0:(1781.0,759.0)
+:Sending Touch (ACTION_UP): 0:(1774.974,761.9398)
+:Sending Touch (ACTION_DOWN): 0:(1576.0,350.0)
+:Sending Touch (ACTION_UP): 0:(1596.8417,355.87305)
+:Sending Touch (ACTION_DOWN): 0:(1736.0,395.0)
+:Sending Touch (ACTION_UP): 0:(1681.4971,446.5123)
+:Sending Touch (ACTION_DOWN): 0:(653.0,635.0)
+:Sending Touch (ACTION_UP): 0:(664.827,641.96765)
+:Sending Touch (ACTION_DOWN): 0:(604.0,592.0)
+:Sending Touch (ACTION_UP): 0:(607.7771,594.9904)
+:Sending Touch (ACTION_DOWN): 0:(1290.0,656.0)
+:Sending Touch (ACTION_UP): 0:(1310.6552,675.29865)
+:Sending Touch (ACTION_DOWN): 0:(799.0,7.0)
+:Sending Touch (ACTION_UP): 0:(848.9502,101.17354)
+:Sending Touch (ACTION_DOWN): 0:(1238.0,757.0)
+:Sending Touch (ACTION_UP): 0:(1237.0911,763.214)
+:Sending Touch (ACTION_DOWN): 0:(790.0,366.0)
+:Sending Touch (ACTION_UP): 0:(798.8138,364.9984)
+:Sending Touch (ACTION_DOWN): 0:(452.0,41.0)
+Events injected: 100
+:Sending rotation degree=0, persist=false
+:Dropped: keys=0 pointers=0 trackballs=0 flips=0 rotations=0
+## Network stats: elapsed time=9630ms (0ms mobile, 0ms wifi, 9630ms not connected)
+// Monkey finished

@@ -1,0 +1,10 @@
+packageName: 'com.game37.bayechuanqi'
+activity: 'com.game37.bayechuanqi/com.game37.bayechuanqi.AppActivity'
+# 登录方式 QQ 微信
+loginType: 'WX'
+# 需查询匹配图片路径
+queryImgPath:
+# 截图路径
+sceneFilePath:
+# 进入游戏
+loginButton: login_button.png
