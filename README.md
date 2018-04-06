@@ -1,4 +1,4 @@
-# selenium
+# monkey
 
 一个monkey的测试框架.放假有空把这个从automation_demo中分离出来,加入adb二次封装方法与图像识别。
 
