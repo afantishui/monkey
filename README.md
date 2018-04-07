@@ -29,7 +29,7 @@
 
 * -lib
 *     -Excel_report.py  输出monkey报告
-*     -logger.py        日志函数
+*     -logger.py        日志
 
  * -logs 日志文件
 
