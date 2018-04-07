@@ -6,24 +6,24 @@
 import xlsxwriter
 import yaml
 
-#添加一个加粗格式
+# 添加一个加粗格式
 def get_format(wd,option = {}):
 	return wd.add_format(option)
 
-#设置居中
+# 设置居中
 def get_format_center(wd,num = 1):
 	return wd.add_format({'align':'center','valign': 'vcenter','border':num})
 
 def set_border_(wd,num = 1):
 	return wd.add_format({}).set_border(num)
 
-#写数据
+# 写数据
 def write_center(worksheet,cl,data,wd):
 	return worksheet.write(cl, data, get_format_center(wd))
 
-#生成饼形图
+# 生成饼形图
 def pie(workbook,worksheet):
-	#创建一个类型为饼状图表
+	# 创建一个类型为饼状图表
 	chart1 = workbook.add_chart({'type':'pie'})
 	chart1.add_series({
 			'name' : '接口测试统计',
@@ -35,17 +35,17 @@ def pie(workbook,worksheet):
 	chart1.set_style(10)
 	worksheet.insert_chart('A9',chart1,{'x_offset':25,'y_offset':10})
 
-#生成接口报告
+# 生成接口报告
 def create_interface_report(filename,list_len,list_pass,list_fail,listids,listnames,listkeys,listconeents,listurls,listtypes,listexpects,list_json,listresult):
 	filepath = open(r'..\\config\\report.yaml', encoding='utf-8')
 	file_config = yaml.load(filepath)
-	#创建Excel文件
+	# 创建Excel文件
 	workbook = xlsxwriter.Workbook(filename)
-	#指定Excel表
+	# 指定Excel表
 	worksheet = workbook.add_worksheet("测试总况")
 	worksheet2 = workbook.add_worksheet("测试详情")
-	#--------------------sheet1操作--------------------#
-	#设置worksheet列行的宽高
+	# --------------------sheet1操作--------------------#
+	# 设置worksheet列行的宽高
 	worksheet.set_column("A:A",15)
 	worksheet.set_column("B:B",20)
 	worksheet.set_column("C:C",20)
@@ -65,10 +65,10 @@ def create_interface_report(filename,list_len,list_pass,list_fail,listids,listna
 	define_format_H2.set_border(1)
 	define_format_H1.set_align("vcenter")
 	define_format_H1.set_align("center")
-	define_format_H2.set_align("vcenter")	#设置垂直居中
-	define_format_H2.set_align("center")	#设置水平居中
-	define_format_H2.set_bg_color("blue")	#设置背景色
-	define_format_H2.set_color("#ffffff")	#字体颜色
+	define_format_H2.set_align("vcenter")	# 设置垂直居中
+	define_format_H2.set_align("center")	# 设置水平居中
+	define_format_H2.set_bg_color("blue")	# 设置背景色
+	define_format_H2.set_color("#ffffff")	# 字体颜色
 
 	worksheet.merge_range("A1:F1", "测试报告总概况", define_format_H1)
 	worksheet.merge_range("A2:F2","测试概括",define_format_H2)
@@ -79,7 +79,7 @@ def create_interface_report(filename,list_len,list_pass,list_fail,listids,listna
 	write_center(worksheet,"B5","提测人员", workbook)
 	write_center(worksheet,"B6","测试人员", workbook)
 
-	#data = {"test_name":"图灵接口测试","test_version":"v2.0.8","test_p1":"张三","test_p2":"李四"}
+	# data = {"test_name":"图灵接口测试","test_version":"v2.0.8","test_p1":"张三","test_p2":"李四"}
 	write_center(worksheet,"C3",file_config['project_name'],workbook)
 	write_center(worksheet,"C4",file_config['interface_version'],workbook)
 	write_center(worksheet,"C5",file_config['submit_person'],workbook)
@@ -90,19 +90,19 @@ def create_interface_report(filename,list_len,list_pass,list_fail,listids,listna
 	write_center(worksheet,"D5","失败总数",workbook)
 	write_center(worksheet,"D6","测试日期",workbook)
 
-	#data1 = {"test_sum":100,"test_success":80,"test_failed":20,"test_data":"2017-09-18"}
+	# data1 = {"test_sum":100,"test_success":80,"test_failed":20,"test_data":"2017-09-18"}
 	write_center(worksheet,"E3",list_len,workbook)
 	write_center(worksheet,"E4",list_pass,workbook)
 	write_center(worksheet,"E5",list_fail,workbook)
 	write_center(worksheet,"E6",file_config["test_time"],workbook)
 
 	write_center(worksheet,"F3","通过率",workbook)
-	#百分数处理'%.2f%%' % 后面有连个小数，'%d%%' %后面没有两个小数
+	# 百分数处理'%.2f%%' % 后面有连个小数，'%d%%' %后面没有两个小数
 	worksheet.merge_range('F4:F6',('%d%%'%(((list_pass)/(list_len))*100)),get_format_center(workbook))
 	pie(workbook,worksheet)
 
-	#--------------sheet2操作--------------#
-	#设置sheet2列行的宽高
+	# --------------sheet2操作--------------#
+	# 设置sheet2列行的宽高
 	worksheet2.set_column("A:A",6)
 	worksheet2.set_column("B:B",15)
 	worksheet2.set_column("C:C",10)
@@ -155,7 +155,7 @@ def create_interface_report(filename,list_len,list_pass,list_fail,listids,listna
 
 #------------------------Monkey报告模板分割线-------------------------------------------
 def create_monkey_report(filename,test_time,test_machine,process_name,run_count,run_time,ANR_count,CRASH_count,Exception_count,cmd,AnrMsg,CrashMsg,ExceptionMsg):
-	#创建Excel文件
+	# 创建Excel文件
 	workbook = xlsxwriter.Workbook(filename)
 	#指定Excel表
 	worksheet = workbook.add_worksheet("测试总况")
@@ -163,7 +163,7 @@ def create_monkey_report(filename,test_time,test_machine,process_name,run_count,
 	worksheet3 = workbook.add_worksheet("CRASH报错")
 	worksheet4 = workbook.add_worksheet("Exception报错")
 	#--------------------sheet1操作--------------------#
-	#设置worksheet列长
+	# 设置worksheet列长
 	worksheet.set_column("A:A",20)
 	worksheet.set_column("B:B",10)
 	worksheet.set_column("C:C",23)
@@ -178,7 +178,7 @@ def create_monkey_report(filename,test_time,test_machine,process_name,run_count,
 	worksheet.set_column("L:L",10)
 	worksheet.set_column("M:M",20)
 
-	#设置worksheet行高
+	# 设置worksheet行高
 	worksheet.set_row(1,30)
 	worksheet.set_row(2,30)
 	worksheet.set_row(3,30)
@@ -201,10 +201,10 @@ def create_monkey_report(filename,test_time,test_machine,process_name,run_count,
 	define_format_H3.set_border(1)
 	define_format_H1.set_align("vcenter")
 	define_format_H1.set_align("center")
-	define_format_H2.set_align("vcenter")	#设置垂直居中
-	define_format_H2.set_align("center")	#设置水平居中
-	define_format_H2.set_bg_color("yellow")	#设置背景色
-	define_format_H2.set_color("#ffffff")	#字体颜色
+	define_format_H2.set_align("vcenter")	# 设置垂直居中
+	define_format_H2.set_align("center")	# 设置水平居中
+	define_format_H2.set_bg_color("yellow")	# 设置背景色
+	define_format_H2.set_color("#ffffff")	# 字体颜色
 	define_format_H3.set_align("vcenter")
 	define_format_H3.set_align("center")
 

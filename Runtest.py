@@ -1,20 +1,21 @@
 # -*- coding: utf-8 -*-
 import sys,os,time,datetime
+import os
+import time
+import datetime
 sys.path.append("..")
 from base.readconfig import getdata_excel
 
 filepath = 'config\\monkey.xlsx'
-
 case = getdata_excel(filepath)
-
 cmd = 'ipconfig > c:\monkey\1.txt'
-#b = os.popen('adb devices')
-#print(b.read())
+# b = os.popen('adb devices')
+# print(b.read())
 
 def start():
 
 	path = os.getcwd()
-	day = time.strftime("%Y%m%d%H%M", time.localtime(time.time())) #获取日期
+	day = time.strftime("%Y%m%d%H%M", time.localtime(time.time())) # 获取日期
 	info_filename = '%s-info.txt'%day
 	logpath1 = path+'\\log\\'+info_filename
 	logpath2 = path+'\\log\\%s-error.txt'%day
@@ -31,5 +32,5 @@ def start():
 				print("测试完成")
 				break
 
-		
-start()
+if __name__ == '__main__':
+	start()		

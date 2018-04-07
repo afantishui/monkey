@@ -3,7 +3,7 @@
 	分析monkey日志
 '''
 import re
-log = "..\\logs\\201709301756-monkey-info.txt"  #测试调试使用
+log = "..\\logs\\201709301756-monkey-info.txt"  # 测试调试使用
 def AnalysisLog(log):
 	log_msg 	 = []
 	AnrMsg       = []
