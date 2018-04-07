@@ -23,8 +23,8 @@
 *     -config.yml    ui自动化配置
 *     -monkey.yml    跑monkey命令配置
 
-* -Base
-*     -queryImg  匹配图片存放
+* -img (把项目截图删除后不显示，可自行建文件夹)
+*     -queryImg  匹配图片存放
 *     -sceneImg  截图目录
 
 * -lib
