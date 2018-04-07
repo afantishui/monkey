@@ -1,6 +1,8 @@
 # monkey
 
-一个monkey的测试框架.放假有空把这个从automation_demo中分离出来,加入adb二次封装方法与图像识别。
+* 一个monkey压力测试框架.
+* 从以前所写的automation_demo里面分离出来.(https://github.com/afantishui/python_automation_demo)
+* 加入adb二次封装方法与图像识别.
 
 ## 所需环境
 * Python3
@@ -21,13 +23,13 @@
 *     -config.yml    ui自动化配置
 *     -monkey.yml    跑monkey命令配置
 
-* -Base
-*     -queryImg  匹配图片存放
+* -img (把项目截图删除后不显示，可自行建文件夹)
+*     -queryImg  匹配图片存放
 *     -sceneImg  截图目录
 
 * -lib
 *     -Excel_report.py  输出monkey报告
-*     -logger.py        日志函数
+*     -logger.py        日志
 
  * -logs 日志文件
 
@@ -48,9 +50,5 @@
 * 2.移动端性能数据收集（已实现）
 * 3.图像识别功能（已实现）
 * 4.用例编写时要把每步的截图放入queryImg目录
-
 * 5.在匹配到目标图片的地方做标记，截图保存（挖坑）
-* 6.加入操作步骤日志输出（挖坑）
-* 7.写一个冒烟模块demo（挖坑）
-* 8.输出报告（挖坑）
-
+* 6.加入操作步骤详细日志输出（挖坑）
