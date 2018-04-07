@@ -1,6 +1,8 @@
 # monkey
 
-一个monkey的测试框架.放假有空把这个从automation_demo中分离出来,加入adb二次封装方法与图像识别。
+* 一个monkey压力测试框架.
+* 从以前所写的automation_demo里面分离出来.(https://github.com/afantishui/python_automation_demo)
+* 加入adb二次封装方法与图像识别.
 
 ## 所需环境
 * Python3
