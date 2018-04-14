@@ -55,18 +55,6 @@ def getImgCordinate(filePath,sceneFilePath):
 		scene_corners = cv2.perspectiveTransform(obj_corners,H)
 		scene_corners = scene_corners.reshape(-1,2)
 
-
-		'''
-		# 绘制图形识别结果图
-		img3 = cv2.rectangle(\
-				img2,\
-				(int(round(scene_corners[3][0])),int(round(scene_corners[3][1]))),\
-				(int(round(scene_corners[1][0])),int(round(scene_corners[1][1]))),\
-				(0,255,0),\
-				3)
-		resultFilePath = os.path.join(r'D:\\py\\Appium\\game\\img\\queryImg',(flag+'_match.png'))
-		cv2.imwrite(resultFilePath,img3)
-		'''
 		# 计算中心坐标
 		mid_cordinate_x = int(round((scene_corners[3][0]+scene_corners[1][0])/2))
 		mid_cordinate_y = int(round((scene_corners[3][1]+scene_corners[1][1])/2))
@@ -86,7 +74,7 @@ def filter_matches(kp1,kp2,matches,ratio = 0.75):
 	p1 = np.float32([kp.pt for kp in mkp1])
 	p2 = np.float32([kp.pt for kp in mkp2])
 	kp_pairs = zip(mkp1,mkp2)
-	return p1,p2,kp_pairs
+	#return p1,p2,kp_pairs
 
 '''
 queryImgPath = os.path.abspath(os.path.join(os.path.dirname(__file__), ".")) + '\\img\\queryImg\\'
